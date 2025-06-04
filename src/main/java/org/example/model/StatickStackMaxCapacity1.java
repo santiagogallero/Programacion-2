@@ -1,11 +1,11 @@
 package org.example.model;
 
-public class StatickStackMaxCapacity implements IStack{
+public class StatickStackMaxCapacity1 implements IStack {
     private final int[] array;
     private int count;
     private final int MaxCapacity;
 
-    public StatickStackMaxCapacity(int MaxCapacity) {
+    public StatickStackMaxCapacity1(int MaxCapacity) {
         this.array = new int[MaxCapacity];
         this.count = 0;
         this.MaxCapacity = MaxCapacity;

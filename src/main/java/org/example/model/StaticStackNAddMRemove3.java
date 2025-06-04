@@ -1,15 +1,13 @@
 package org.example.model;
 
-import java.util.Stack;
-
-public class StaticStackNAddMRemove implements IStack {
+public class StaticStackNAddMRemove3 implements IStack {
     private final int [] array;
     private int count;
     private final int maxCapacity;
     private  int n;
     private  int m;
 
-    public StaticStackNAddMRemove(int n, int m, int maxCapacity) {
+    public StaticStackNAddMRemove3(int n, int m, int maxCapacity) {
         this.array = new int[maxCapacity];
         this.count = 0;
         this.maxCapacity = maxCapacity;

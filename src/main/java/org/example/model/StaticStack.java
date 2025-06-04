@@ -39,4 +39,19 @@ public class StaticStack implements IStack {
         }
         return this.array[this.count-1];
     }
+    public void revert(){
+        if(isEmpty()){
+            System.out.println("Error, no se puede revertir una pila vacia");
+            return;
+        }
+        int i = 0;
+        int j = this.count - 1;
+        while (i < j) {
+            int temp = this.array[i];
+            this.array[i] = this.array[j];
+            this.array[j] = temp;
+            i++;
+            j--;
+        }
+    }
 }
