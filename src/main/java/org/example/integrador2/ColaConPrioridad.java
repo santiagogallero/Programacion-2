@@ -30,4 +30,25 @@ public class ColaConPrioridad {
     public PrioridadValor get(int index){
         return datos.get(index);
     }
+
+    private int binarySearch(int prioridad){
+        int left = 0;
+        int right = datos.size() - 1;
+
+        while (left <= right) {
+
+            int mid = left + (right - left) / 2;
+            int actual = datos.get(mid).getPrioridad();
+
+            if (actual == prioridad) {
+                return mid; // Encontrado
+            } else if (actual < prioridad) {
+                left = mid + 1; // Buscar en la mitad derecha
+            } else {
+                right = mid - 1; // Buscar en la mitad izquierda
+            }
+        }
+        // No encontrado → devuelve la posición donde debería insertarse
+        return -(left+1); // No encontrado
+    }
 }
